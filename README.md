@@ -20,7 +20,8 @@ Masz dwie możliwości:
 
 ### ✅ Opcja 1: Uruchomienie w Dockerze (rekomendowane)
 
-🔹 1.  `sudo docker-compose up --build`
+🔹 1.  `Upewnij się, że ustawiono zmienną środowiskową ALLOWED_HOSTS – np. w pliku .env lub bezpośrednio w docker-compose.yml.`
+🔹 2.  `sudo docker-compose up --build`
 
 ### ✅ Opcja 2: Uruchomienie lokalnie (bez Dockera)
 

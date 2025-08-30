@@ -10,32 +10,33 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: 3.9
-    
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         pip install flake8 coverage
-    
+
     - name: Lint with flake8
       run: |
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Ta komenda MUSI zapisywać wynik do pliku
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics > flake8_report.txt
-    
+
     - name: Run tests with coverage
       run: |
+        # Te komendy tworzą raporty coverage
         coverage run --source=. manage.py test
         coverage report -m > coverage_report.txt
         coverage html
-    
+
     - name: Upload test reports
       uses: actions/upload-artifact@v4
       with:

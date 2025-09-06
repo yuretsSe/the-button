@@ -1,6 +1,6 @@
 # 🟢 The Button
 
-Test 1 Prosta aplikacja w Django z jednym przyciskiem `Ping`, który wysyła zapytanie do backendu i wyświetla odpowiedź w przeglądarce.
+Test 1 2 3 Prosta aplikacja w Django z jednym przyciskiem `Ping`, który wysyła zapytanie do backendu i wyświetla odpowiedź w przeglądarce.
 
 ---
 
